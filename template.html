@@ -3,52 +3,17 @@
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body>
-<?php $current_points = 123; ?>
-    <div class="container">
-        <div class="scores"><?php echo $current_points; ?></div>
+<div class="container">
+    <div class="scores"><?php echo $current_points; ?></div>
         <div class="wrapper">
-            <?php $actions = array(
-                0 => array(
-                    'id' => 145,
-                    'title' => 'Test 1',
-                    'rest_time' => 0,
-                    'recovery_time' => 15,
-                    'points' => 10,
-                ),
-
-                1 => array(
-                    'id' => 146,
-                    'title' => 'Test 2',
-                    'rest_time' => 428,
-                    'recovery_time' => 660,
-                    'points' => 20,
-                ),
-
-                2 => array(
-                    'id' => 147,
-                    'title' => 'Test 3',
-                    'rest_time' => 0,
-                    'recovery_time' => 480,
-                    'points' => 30,
-                ),
-
-                3 => array(
-                    'id' => 148,
-                    'title' => 'Test 4',
-                    'rest_time' => 10,
-                    'recovery_time' => 5,
-                    'points' => 1,
-                    ),
-                );
-            ?>
-            <?php
-                while (list($key, $value) = each($actions)) {
-                    echo "<div data-id=\"", "$value[id]", "\"
-                        data-points=\"", "$value[points]", "\"
-                        data-recovery=\"", "$value[recovery_time]", "\"
-                        class=\"item j_button\"><div class=\"image\"><img src=\"/img/", "$key", ".png\"/></div></div>";
-                }
-            ?>
+            <?php while (list($key, $value) = each($actions)) {
+                echo "<div data-id=\"", "$value[id]", "\"
+                    data-points=\"", "$value[points]", "\"
+                    data-rest=\"", "$value[rest_time]", "\"
+                    data-recovery=\"", "$value[recovery_time]", "\"
+                    class=\"item j_button\">
+                <div class=\"image\"><img src=\"img/", "$key", ".png\"></div></div>";
+            } ?>
         </div>
     </div>
     <script type="text/javascript" src="/js/script.js"></script>

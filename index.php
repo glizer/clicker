@@ -5,7 +5,7 @@ $actions = array(
         'id' => 145,
         'title' => 'Test 1',
         'rest_time' => 0,
-        'recovery_time' => 600,
+        'recovery_time' => 15,
         'points' => 10,
     ),
 
@@ -23,6 +23,14 @@ $actions = array(
         'rest_time' => 0,
         'recovery_time' => 480,
         'points' => 30,
+    ),
+
+    3 => array(
+        'id' => 148,
+        'title' => 'Test 4',
+        'rest_time' => 10,
+        'recovery_time' => 5,
+        'points' => 1,
     ),
 );
 include 'template.html';
