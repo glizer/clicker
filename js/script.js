@@ -5,6 +5,7 @@ var buttons = document.getElementsByClassName('j_button'),
 
 for (var i = 0; i < buttons.length; i++) {
     var button = buttons[i];
+    checkTimer(button);
     button.onclick = function() {
         var score = document.getElementsByClassName(scoreClass),
             points = Number(this.getAttribute('data-points')),
@@ -20,6 +21,13 @@ for (var i = 0; i < buttons.length; i++) {
             getRequest(id);
         }
     };
+}
+
+function checkTimer(button) {
+    var restTime = Number(button.getAttribute('data-rest'));
+    if (restTime > 0) {
+        setTimer(restTime, button);
+    }
 }
 
 function setTimer(time, element) {
@@ -66,5 +74,3 @@ function getRequest(id) {
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.send({id: id});
 }
-
-
