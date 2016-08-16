@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "TrebuchetMS";
+  src: local(TrebuchetMS), url(/fonts/trebuchetMS.ttf); }
+body {
+  font-family: "TrebuchetMS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; }
+
+.scores {
+  position: absolute;
+  top: 14px;
+  left: 37px;
+  height: 27px;
+  padding: 0 10px 0 20px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 22px; }
+  .scores:before {
+    position: absolute;
+    content: '';
+    background: url(/img/star.png);
+    width: 35px;
+    height: 38px;
+    left: -15px;
+    top: -5px; }
+
+.container {
+  position: relative;
+  width: 360px;
+  height: 124px;
+  background: url(/img/bg.jpg);
+  background-size: cover;
+  margin-left: 50%;
+  transform: translate(-50%); }
+
+.wrapper {
+  position: absolute;
+  width: 78%;
+  bottom: 8px;
+  padding: 0 7% 0 15%; }
+  .wrapper .item {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: .2s; }
+    .wrapper .item:hover {
+      transform: scale(1.1); }
+    .wrapper .item.disabled {
+      cursor: default; }
+      .wrapper .item.disabled:hover {
+        transform: scale(1); }
+      .wrapper .item.disabled .image {
+        opacity: .5; }
+    .wrapper .item .image {
+      width: 57px;
+      margin: 0 auto;
+      text-align: center; }
+    .wrapper .item span {
+      text-shadow: 1px 1px 1px black;
+      color: #ffffff;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      top: 50%;
+      margin-top: -10px; }
+
+/*# sourceMappingURL=styles.css.map */

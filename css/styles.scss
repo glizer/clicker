@@ -1,0 +1,95 @@
+$c-black: #000000;
+$c-white: #ffffff;
+
+@font-face {
+  font-family: "TrebuchetMS";
+  src: local(TrebuchetMS), url(/fonts/trebuchetMS.ttf);
+}
+
+body {
+  font-family: "TrebuchetMS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.scores {
+  position: absolute;
+  top: 14px;
+  left: 37px;
+  height: 27px;
+  padding: 0 10px 0 20px;
+  background: $c-black;
+  color: $c-white;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 22px;
+
+  &:before {
+    position: absolute;
+    content:'';
+    background: url(/img/star.png);
+    width: 35px;
+    height: 38px;
+    left: -15px;
+    top: -5px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 360px;
+  height: 124px;
+  background: url(/img/bg.jpg);
+  background-size: cover;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.wrapper {
+  position: absolute;
+  width: 78%;
+  bottom: 8px;
+  padding: 0 7% 0 15%;
+
+  .item {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &.disabled {
+      cursor: default;
+
+      &:hover {
+        transform: scale(1);
+      }
+
+      .image {
+        opacity: .5;
+      }
+    }
+
+    .image {
+      width: 57px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    span {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+      color: $c-white;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      top: 50%;
+      margin-top: -10px;
+    }
+  }
+}
+
