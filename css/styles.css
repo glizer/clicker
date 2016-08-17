@@ -57,7 +57,8 @@ body {
     .wrapper .item .image {
       width: 57px;
       margin: 0 auto;
-      text-align: center; }
+      text-align: center;
+      opacity: 1; }
     .wrapper .item span {
       text-shadow: 1px 1px 1px black;
       color: #ffffff;
